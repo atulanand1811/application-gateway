@@ -1,0 +1,23 @@
+ribbon:
+    eureka:
+        enabled: false
+server:
+    port: 8085
+zuul:
+    sensitiveHeaders: Cookie,Set-Cookie
+    routes:
+        auditChecklist:
+            serviceId: auditChecklist
+            url: http://localhost:9100/
+        auditSeverity:
+            serviceId: auditSeverity
+            url: http://localhost:9200/
+        auditBenchmark:
+            serviceId: auditBenchmark
+            url: http://localhost:9300/
+        auditAuthentication:
+            serviceId: auditAuthentication
+            url: http://localhost:9400/
+           
+            
+           
